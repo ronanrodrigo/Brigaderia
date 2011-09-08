@@ -1,0 +1,10 @@
+%h1 Nossas delícias
+
+%div.delicious_area
+  - @products.each do |product|
+    %a.delicious_item
+      %p
+        = product.name
+        = product.description
+        = product.price
+      = image_tag product.image.url(:thumb)

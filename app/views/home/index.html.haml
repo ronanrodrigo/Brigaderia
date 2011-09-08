@@ -1,0 +1,9 @@
+= link_to "Brigadeiros", delicious_products_path
+%h2 Destaques
+%ul
+  - @products.each do |product|
+    %li
+      = image_tag product.image.url(:thumb)
+      = product.name
+%h2 Contato
+= render :partial => "contacts/form"
