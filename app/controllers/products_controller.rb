@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_filter :authenticate_user!, :except => :client_products
+  layout "administration", :except => :client_products
   
   # GET /products
   # GET /products.json
