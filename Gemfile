@@ -37,3 +37,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'haml'
 gem 'erb2haml', :group => :development
+
+gem 'execjs'
+gem 'therubyracer'
+
