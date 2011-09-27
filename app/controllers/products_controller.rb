@@ -52,8 +52,9 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    
     @product = Product.new(params[:product])
-
+    @product.featured = params[:product][:featured].to_i
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
