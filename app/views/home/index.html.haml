@@ -3,7 +3,13 @@
 = link_to "Contato", delicious_products_path
 %h2 Destaques
 %ul
-  - @products.each do |product|
+  - @featured_products.each do |product|
+    %li
+      = image_tag product.image.url(:thumb)
+      = product.name
+%h2 Não destaques
+%ul
+  - @simple_products.each do |product|
     %li
       = image_tag product.image.url(:thumb)
       = product.name

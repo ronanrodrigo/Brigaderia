@@ -3,7 +3,9 @@ class HomeController < ApplicationController
   
   def index
     featureds = Product.where(:featured => true)
-    @products = featureds.blank? ? Product.limit(5).all : featureds
+    simples = Product.where(:featured => false)
+    @featured_products = featureds.blank? ? simples.limit(5) : featureds.limit(5)
+    @simple_products = simples.limit(5)
     @contact = Contact.new()
   end
   
