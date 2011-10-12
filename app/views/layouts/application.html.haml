@@ -9,6 +9,8 @@
     = link_to "Página inícial", root_path
     = link_to "Nossas delícias", delicious_products_path
     = link_to "Contato", new_contact_path
+    - if user_signed_in?
+      = link_to('Logout', destroy_user_session_path, :method => 'delete')
     
     %h2 Destaques
     %ul
@@ -16,10 +18,5 @@
         %li
           = image_tag product.image.url(:thumb)
           = product.name
-    
-    
-    - if user_signed_in?
-      %p
-        = link_to('Logout', destroy_user_session_path, :method => 'delete')
-        
+
     = yield
