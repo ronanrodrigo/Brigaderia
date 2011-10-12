@@ -11,23 +11,23 @@
       #menu-content
         %ul
           %li= link_to "Página inícial", root_path
-          %li
-            &bull;
+          %li.coroa
           %li= link_to "Quem somos", who_path
-          %li
-            &bull;
+          %li.coroa
           %li= link_to "Nossas delícias", delicious_products_path
-          %li
-            &bull;
+          %li.coroa
           %li= link_to "Contato", new_contact_path
-          %li
-            &bull;
-          - if user_signed_in?
-            %li= link_to('Logout', destroy_user_session_path, :method => 'delete')
-      
+          
+        #social
+          = link_to image_tag("icons/facebook.png"), "#"
+          = link_to image_tag("icons/twitter.png"), "#"
+
         #logo
-          = image_tag "logo.png"
-  
+          = link_to image_tag("logo.png"), root_path
+    
+    #destaques
+      s
+
     %h2 Destaques
     %ul
       - @featured_products.each do |product|
@@ -36,3 +36,6 @@
           = product.name
 
     = yield
+/
+  - if user_signed_in?
+    %li= link_to('Logout', destroy_user_session_path, :method => 'delete')
