@@ -3,14 +3,27 @@
   %head
     %title Brigadeiria
     = stylesheet_link_tag    "application"
+    = stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Leckerli+One"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = link_to "Página inícial", root_path
-    = link_to "Nossas delícias", delicious_products_path
-    = link_to "Contato", new_contact_path
-    - if user_signed_in?
-      = link_to('Logout', destroy_user_session_path, :method => 'delete')
+    #menu
+      #menu-content
+        %ul
+          %li= link_to "Página inícial", root_path
+          %li
+            &bull;
+          %li= link_to "Nossas delícias", delicious_products_path
+          %li
+            &bull;
+          %li= link_to "Contato", new_contact_path
+          %li
+            &bull;
+          - if user_signed_in?
+            %li= link_to('Logout', destroy_user_session_path, :method => 'delete')
+      
+        #logo
+          = image_tag "logo.png"
     
     %h2 Destaques
     %ul
