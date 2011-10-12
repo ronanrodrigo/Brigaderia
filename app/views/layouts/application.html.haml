@@ -13,6 +13,9 @@
           %li= link_to "Página inícial", root_path
           %li
             &bull;
+          %li= link_to "Quem somos", who_path
+          %li
+            &bull;
           %li= link_to "Nossas delícias", delicious_products_path
           %li
             &bull;
@@ -24,7 +27,7 @@
       
         #logo
           = image_tag "logo.png"
-    
+  
     %h2 Destaques
     %ul
       - @featured_products.each do |product|

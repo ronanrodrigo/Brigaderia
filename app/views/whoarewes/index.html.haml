@@ -1,0 +1,15 @@
+%h1 Listing whoarewes
+%table
+  %tr
+    %th Description
+    %th
+    %th
+    %th
+  - @whoarewes.each do |whoarewe|
+    %tr
+      %td= whoarewe.description
+      %td= link_to 'Show', whoarewe
+      %td= link_to 'Edit', edit_whoarewe_path(whoarewe)
+      %td= link_to 'Destroy', whoarewe, confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Whoarewe', new_whoarewe_path

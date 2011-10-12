@@ -1,0 +1,15 @@
+= form_for(@whoarewe) do |f|
+  - if @whoarewe.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@whoarewe.errors.count, "error")
+        prohibited this whoarewe from being saved:
+      %ul
+        - @whoarewe.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :description
+    %br/
+    = f.text_area :description
+  .actions
+    = f.submit
