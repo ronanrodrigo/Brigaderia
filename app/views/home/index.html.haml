@@ -1,4 +1,4 @@
-= link_to "Página inícial", delicious_products_path
+= link_to "Página inícial", root_path
 = link_to "Nossas delícias", delicious_products_path
 = link_to "Contato", delicious_products_path
 %h2 Destaques
@@ -13,5 +13,3 @@
     %li
       = image_tag product.image.url(:thumb)
       = product.name
-%h2 Contato
-= render :partial => "contacts/form"
