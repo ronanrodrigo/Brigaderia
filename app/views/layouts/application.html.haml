@@ -6,8 +6,20 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    site
+    = link_to "Página inícial", root_path
+    = link_to "Nossas delícias", delicious_products_path
+    = link_to "Contato", new_contact_path
+    
+    %h2 Destaques
+    %ul
+      - @featured_products.each do |product|
+        %li
+          = image_tag product.image.url(:thumb)
+          = product.name
+    
+    
     - if user_signed_in?
       %p
         = link_to('Logout', destroy_user_session_path, :method => 'delete')
+        
     = yield

@@ -1,12 +1,3 @@
-= link_to "Página inícial", root_path
-= link_to "Nossas delícias", delicious_products_path
-= link_to "Contato", delicious_products_path
-%h2 Destaques
-%ul
-  - @featured_products.each do |product|
-    %li
-      = image_tag product.image.url(:thumb)
-      = product.name
 %h2 Não destaques
 %ul
   - @simple_products.each do |product|
