@@ -23,12 +23,13 @@ body, a, img, ul, li
   width:  100%
   height:  40px
   margin-top: 50px
-  font-family: 'Leckerli One', sans-serif
+  font-family: 'Georgia', sans-serif
   border-bottom: 1px solid #663232
 
 #menu a:hover
 
 #menu-content
+  font-size: 17px
   width: 980px
   margin-left: auto
   margin-right: auto
@@ -41,7 +42,7 @@ body, a, img, ul, li
   float: left
   color: white
   height: 40px
-  line-height: 39px
+  line-height: 43px
   padding: 0px 5px 0px 5px
 
 #menu-content ul li a
@@ -57,14 +58,122 @@ body, a, img, ul, li
 #logo
   position: absolute
   margin-top: -90px
+  z-index: 300
 
 .coroa
-  background: url(coroa.png) no-repeat 0px 12px
+  background: url(coroa.png) no-repeat 0px 16px
 
 #social
   line-height: 42px
 
 #destaques
   width: 100%
-  height: 230px
+  height: 279px
+  background: url(pattern.jpg) 0px 140px
+  border-bottom: 1px solid #B4AEA2
 
+#brigadeiro-destaque
+  width: 980px
+  margin-left: auto
+  margin-right: auto
+
+#dock
+  position: absolute
+  background: url(dock.png) no-repeat
+  width: 980px
+  height: 85px
+  margin-top: 231px
+  z-index: 100
+  
+/* slider */
+#slider
+  width: 800px
+  margin-left: auto
+  margin-right: auto
+  height: 270px
+  position: absolute
+  margin-left: 90px
+  z-index: 200
+  overflow: hidden
+
+.img
+  float: left
+  width: 280px
+  height: 270px
+  margin-right: 20px
+
+.img img
+  position: absolute
+  bottom: 0
+
+.name
+  float: left
+  clear: both
+  
+.name-description
+  font-family: 'Leckerli One', sans-serif
+  font-size: 25px
+  letter-spacing: 1px
+  color: #7D4D3B
+  text-shadow: #EBE4DF 1px 1px 0px
+  padding-top: 72px
+  float: left
+
+.description
+  font-family: Tahoma, Arial, sans-serif
+  font-size: 20px
+  margin-left: 10px
+  float: left
+  width: 470px
+  color: #7D4D3B
+  text-shadow: #EBE4DF 1px 1px 0px
+  line-height: 30px
+  letter-spacing: 1px
+
+.arrow
+  position: absolute
+  top: 90px
+  right: 0
+  z-index: 1000
+
+.brigadeiro
+  width: 800px
+  height: 270px
+  float: left
+  display: none
+  
+.product_left, .product_right
+  height: 80px
+  color: #9F5C59
+  font-family: Tahoma, Arial, sans-serif
+  letter-spacing: 1px
+  font-size: 16px
+  background-color: #EBE8D7
+  margin-top: 10px
+  padding: 8px
+  
+.product_left
+  text-align: left
+  
+.product_right
+  text-align: right
+
+.some_products
+  padding-top: 40px
+  width: 750px
+  margin-left: auto
+  margin-right: auto
+  font-size: 26px
+  
+.product_img_left
+  float: left
+  margin-right: 5px
+  
+.product_img_right
+  float: right
+  margin-left: 5px
+  
+.product_name
+  color: #452D22
+  font-family: Tahoma, Arial, sans-serif
+  letter-spacing: 1px

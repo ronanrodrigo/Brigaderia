@@ -26,16 +26,22 @@
           = link_to image_tag("logo.png"), root_path
     
     #destaques
-      s
-
-    %h2 Destaques
-    %ul
-      - @featured_products.each do |product|
-        %li
-          = image_tag product.image.url(:thumb)
-          = product.name
+      #brigadeiro-destaque
+        #slider
+          - @featured_products.each do |brigadeiro|
+          
+            %div.brigadeiro{id: "brig_#{brigadeiro.id}"}
+              .img= image_tag brigadeiro.image.url(:medium)
+              .name-description= brigadeiro.name
+              %span.description= truncate(brigadeiro.description, :length => 80)
+              
+          .arrow= image_tag "arrow.png"
+        #dock
 
     = yield
 /
   - if user_signed_in?
     %li= link_to('Logout', destroy_user_session_path, :method => 'delete')
+    
+:javascript
+  $(document).ready(function($) { AtatumSlider.initialize(); });
