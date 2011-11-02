@@ -1,3 +1,17 @@
+#destaques
+  #brigadeiro-destaque
+    #slider
+      - @featured_products.each do |brigadeiro|
+      
+        %div.brigadeiro{id: "brig_#{brigadeiro.id}"}
+          .img= image_tag brigadeiro.image.url(:medium)
+          .name-description= brigadeiro.name
+          %span.description= truncate(brigadeiro.description, :length => 80)
+          
+      .arrow= image_tag "arrow.png"
+    #dock
+
+
 .some_products
   %ul.product_index_list
     - @simple_products.each_with_index do |product, index|
