@@ -1,13 +1,17 @@
-%h1 Listing contacts
-%table
-  %tr
-    %th Name
-    %th Email
-    %th
-  - @contacts.each do |contact|
-    %tr
-      %td= contact.name
-      %td= contact.email
-      %td= link_to 'Destroy', contact, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Contact', new_contact_path
+#fundo
+  #conteudo
+    .title-section
+      Lista de contatos
+    .contact_form
+      %table.adm
+        %tr
+          %th Nome
+          %th Email
+          %th
+        - @contacts.each do |contact|
+          %tr
+            %td.name= contact.name
+            %td= contact.email
+            %td= link_to 'Apagar', contact, confirm: 'Você tem certeza?', method: :delete
+      %br/
+      = link_to 'Novo contato', new_contact_path

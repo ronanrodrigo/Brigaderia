@@ -1,5 +1,9 @@
-%h1 Editing whoarewe
-= render 'form'
-= link_to 'Show', @whoarewe
-|
-\#{link_to 'Back', whoarewes_path}
+#fundo
+  #conteudo
+    .title-section
+      Editar
+    .contact_form
+      = render 'form'
+      = link_to 'Visualisar', @whoarewe
+      |
+      \#{link_to 'Back', whoarewes_path}

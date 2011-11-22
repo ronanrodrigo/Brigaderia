@@ -12,7 +12,7 @@ Brigadeiria::Application.routes.draw do
     end
   end
   
-  devise_for :users, :path => "u"
+  devise_for :users
   match 'who' => 'whoarewes#show'
   
   resources :whoarewes

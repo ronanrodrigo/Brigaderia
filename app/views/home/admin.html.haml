@@ -1,3 +1,9 @@
-= link_to 'Administração dos produtos', products_path
-= link_to 'Lista de contatos', contacts_path
-= link_to 'Quem somos', whoarewes_path
+#fundo
+  #conteudo
+    .title-section
+      Acesso restrito
+    .contact_form
+      = link_to 'Administração dos produtos', products_path, class: "adm"
+      = link_to 'Lista de contatos', contacts_path, class: "adm"
+      = link_to 'Quem somos', whoarewes_path, class: "adm"
+      = link_to 'Sair', destroy_user_session_path, :method => :delete, class: "adm"

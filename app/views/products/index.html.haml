@@ -1,23 +1,24 @@
-%h1 Listing products
-%table
-  %tr
-    %th Name
-    %th Description
-    %th Price
-    %th Image
-    - if user_signed_in?
-      %th
-      %th
-      %th
-  - @products.each do |product|
-    %tr
-      %td= product.name
-      %td= product.description
-      %td= product.price
-      %td= image_tag product.image.url(:thumb)
-      - if user_signed_in?
-        %td= link_to 'Show', product
-        %td= link_to 'Edit', edit_product_path(product)
-        %td= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete
-%br/
-= link_to 'New Product', new_product_path
+#fundo
+  #conteudo
+    .title-section
+      Lista de produtos
+    .contact_form
+      %table.adm
+        %tr
+          %th Nome
+          %th Preço
+          %th Foto
+          - if user_signed_in?
+            %th
+            %th
+            %th
+        - @products.each do |product|
+          %tr
+            %td.name= product.name
+            %td= product.price
+            %td= image_tag product.image.url(:thumb)
+            - if user_signed_in?
+              %td= link_to 'Editar', edit_product_path(product)
+              %td= link_to 'Apagar', product, confirm: 'Você tem certeza?', method: :delete
+      %br/
+      = link_to 'Novo brigadeiro', new_product_path

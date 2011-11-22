@@ -7,17 +7,16 @@
       %ul
         - @contact.errors.full_messages.each do |msg|
           %li= msg
+  .field.name
+    = f.label "Nome:"
   .field
-    = f.label :name
+    = f.label "E-mail:"
     %br/
     = f.text_field :name
-  .field
-    = f.label :email
-    %br/
     = f.text_field :email
   .field
-    = f.label :message
+    = f.label "Mensagem:"
     %br/
-    = f.text_area :message
+    = f.text_area :message, rows: 5
   .actions
-    = f.submit
+    = f.submit "Enviar mensagem"

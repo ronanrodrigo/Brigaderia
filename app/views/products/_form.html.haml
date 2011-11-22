@@ -14,7 +14,7 @@
   .field
     = f.label "Descrição"
     %br/
-    = f.text_area :description
+    = f.text_area :description, rows: 5
   .field
     = f.label "Preço"
     %br/
@@ -28,4 +28,4 @@
     %br/
     = f.check_box :featured
   .actions
-    = f.submit
+    = f.submit "Salvar"

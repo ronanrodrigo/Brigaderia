@@ -1,5 +1,9 @@
-%h1 Editing product
-= render 'form'
-= link_to 'Show', @product
-|
-\#{link_to 'Back', products_path}
+#fundo
+  #conteudo
+    .title-section
+      Editar
+    .contact_form
+      = render 'form'
+      = link_to 'Visualisar', @product
+      |
+      \#{link_to 'Voltar', products_path}
