@@ -1,5 +1,5 @@
 development:
-  adapter: mysql2
+  adapter: postgresql
   host: 127.0.0.1
   port: 3306
   # socket: /var/run/mysqld/mysqld.sock
@@ -11,7 +11,7 @@ development:
   pool: 5
 
 test: &TEST
-  adapter: mysql2
+  adapter: postgresql
   host: 127.0.0.1
   port: 3306
   # socket: /var/run/mysqld/mysqld.sock
@@ -26,7 +26,7 @@ cucumber:
   <<: *TEST
 
 production: &PRODUCTION
-  adapter: mysql2
+  adapter: postgresql
   host: 127.0.0.1
   port: 3306
   # socket: /var/run/mysqld/mysqld.sock

@@ -41,3 +41,5 @@ gem 'erb2haml', :group => :development
 gem 'execjs'
 gem 'therubyracer'
 
+
+gem 'rake', '0.9.2.2'
