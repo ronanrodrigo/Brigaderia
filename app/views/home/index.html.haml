@@ -15,19 +15,10 @@
 .some_products
   %ul.product_index_list
     - @simple_products.each_with_index do |product, index|
-      - if index.even?
-        %li.product_left
-          .product_img_left
-            = image_tag product.image.url(:short)
-          %b.product_name
-            = product.name
-          %br
-          = product.description
-      - else
-        %li.product_right
-          .product_img_right
-            = image_tag product.image.url(:short)
-          %b.product_name
-            = product.name
-          %br
-          = product.description
+      %li.product_left
+        .product_img_left
+          = image_tag product.image.url(:short)
+        %b.product_name
+          = product.name
+        %br
+        = product.description
