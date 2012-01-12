@@ -1,8 +1,7 @@
 var AtatumSlider = {
 	
 	initialize: function(){
-		$(".brigadeiro").first().show();
-		
+		$(".brigadeiro").first().show();		
 		$(".arrow").click(function(){
 			var to_show = $(".brigadeiro:visible").first();
 			to_show.hide("slow");
@@ -13,7 +12,4 @@ var AtatumSlider = {
 			to_show.show("slow");
 		});
 	}
-	
-	
-	
 }

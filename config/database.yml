@@ -1,8 +1,8 @@
 development:
-  adapter: postgresql
+  adapter: mysql2
   host: 127.0.0.1
   port: 3306
-  # socket: /var/run/mysqld/mysqld.sock
+  # socket: /var/run/mysql2d/mysql2d.sock
   database: brigaderia_development
   username: root
   password: 
@@ -11,10 +11,10 @@ development:
   pool: 5
 
 test: &TEST
-  adapter: postgresql
+  adapter: mysql2
   host: 127.0.0.1
   port: 3306
-  # socket: /var/run/mysqld/mysqld.sock
+  # socket: /var/run/mysql2d/mysql2d.sock
   database: brigaderia_test
   username: root
   password: 
@@ -26,10 +26,10 @@ cucumber:
   <<: *TEST
 
 production: &PRODUCTION
-  adapter: postgresql
+  adapter: mysql2
   host: 127.0.0.1
   port: 3306
-  # socket: /var/run/mysqld/mysqld.sock
+  # socket: /var/run/mysql2d/mysql2d.sock
   database: brigaderia
   username: root
   password: 
