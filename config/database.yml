@@ -5,7 +5,7 @@ development:
   # socket: /var/run/mysql2d/mysql2d.sock
   database: brigaderia_development
   username: root
-  password: 
+  password: twyg
   encoding: utf8
   reconnect: false
   pool: 5
@@ -17,7 +17,7 @@ test: &TEST
   # socket: /var/run/mysql2d/mysql2d.sock
   database: brigaderia_test
   username: root
-  password: 
+  password: twyg
   encoding: utf8
   reconnect: false
   pool: 5
@@ -32,7 +32,7 @@ production: &PRODUCTION
   # socket: /var/run/mysql2d/mysql2d.sock
   database: brigaderia
   username: root
-  password: 
+  password: twyg
   encoding: utf8
   reconnect: false
   pool: 5

@@ -2,13 +2,25 @@
   #conteudo
     .title-section
       Nossas delícias
-    .some_products.all
-      %ul.product_index_list
-        - @products.each_with_index do |product, index|
-          %li.product_left.all_products
-            .product_img_left
-              = image_tag product.image.url(:short)
-            %b.product_name
-              = product.name
+    
+
+    .all-products{style: "height: #{((@products.count/4)+1)*200}px"}
+      - @products.each_with_index do |product, index|
+        %a.the-product{href: product.image.url(:large), product_id: product.id, title: product.name}
+          .photo-and-name
+            = image_tag product.image.url(:medium)
             %br
+            = product.name
+
+          .product-description
             = product.description
+
+:javascript
+  $(".the-product").hover(
+    function() { $(this).children(".photo-and-name").fadeTo(100, 0.07); },
+    function() { $(this).children(".photo-and-name").fadeTo(100, 1); }
+  );
+
+  $(".the-product").fancybox({
+        'titlePosition' : 'inside'
+      });

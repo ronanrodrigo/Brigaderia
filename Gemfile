@@ -43,3 +43,4 @@ gem 'therubyracer'
 
 
 gem 'rake', '0.9.2.2'
+gem "fancybox-rails", "~> 0.1.4"
